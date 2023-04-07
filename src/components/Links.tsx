@@ -23,6 +23,11 @@ export default function Links() {
       desc: '在新的标签页中显示一个漂亮的显示工作状态和时间的霓虹灯界面，可以控制是否在工作中，并统计工作时间等',
     },
     {
+      link: 'https://chrome.google.com/webstore/detail/lazy-favorites/ejnnjbdiehpgikhapbembdllfmolknmi?hl=zh-CN&authuser=1',
+      name: '懒人收藏夹',
+      desc: '直接用时间作为收藏夹的分组依据，每个月创建一个文件夹，一键收藏网页到当前月份的文件夹中',
+    },
+    {
       link: 'https://marry3.love',
       name: 'Marry3.love',
       desc: 'Witness your Love in Web3 and get the Soulbound NFT Certificate on the chain',
