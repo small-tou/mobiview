@@ -72,16 +72,19 @@ export default function Home() {
             boxShadow: '0 0 10px rgba(0,0,0,0.1)',
             overflow: 'hidden',
           }}
-          sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
         ></iframe>
       )}
 
-      <div className="flex flex-row items-center justify-center p-10 gap-10">
+      <div className="flex flex-row items-center justify-center p-10 gap-5">
         <input
           type="text"
           className="border-2 border-gray-300 p-2"
           onChange={(e) => {
             setNewURL(e.target.value);
+          }}
+          style={{
+            width: '300px',
+            borderRadius: '8px',
           }}
           placeholder="Enter URL"
         />
