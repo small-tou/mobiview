@@ -48,6 +48,11 @@ export default function Links() {
       name: 'Measuring.world',
       desc: 'Measuring the crypto metaverse world',
     },
+    {
+      link: 'https://apps.apple.com/cn/app/id998079819',
+      name: '喵老师绘本故事',
+      desc: '瞬间爱上的好声音，以及精挑细选的好绘本，来自独立开发者的礼物',
+    },
   ];
   return (
     <div
