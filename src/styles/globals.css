@@ -25,3 +25,40 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+@font-face {
+  font-family: Montserrat;
+  src: url('/Montserrat/Montserrat-Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url('/Montserrat/Montserrat-Bold.ttf');
+  font-style: normal;
+  font-weight: bold;
+}
+
+* {
+  font-family: Montserrat, Inter, Roboto, -apple-system, BlinkMacSystemFont,
+    PingFang SC, Microsoft YaHei, sans-serif !important;
+}
+body p {
+  font-family: Montserrat, Inter, Roboto, -apple-system, BlinkMacSystemFont,
+    PingFang SC, Microsoft YaHei, sans-serif;
+}
+
+.main-body::after {
+  background: var(--primary-glow);
+  width: 240px;
+  height: 180px;
+  z-index: -1;
+}
+
+.main-body::before,
+.main-body::after {
+  content: '';
+  left: 50%;
+  position: absolute;
+  filter: blur(45px);
+  transform: translateZ(0);
+}
