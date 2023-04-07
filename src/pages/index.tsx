@@ -27,6 +27,10 @@ export default function Home() {
       const _url = decodeURIComponent(query.get('url') as string);
       if (_url) setUrl(_url);
     }
+    if (query && query.get('size')) {
+      const _size = query.get('size') as string;
+      if (_size) activeScreenSize(_size);
+    }
   }, []);
 
   function activeScreenSize(key: string) {
@@ -34,6 +38,18 @@ export default function Home() {
     setWidth(Number(width));
     setHeight(Number(height));
     setScreenSize(key);
+    const query = new URLSearchParams(window.location.search);
+    if (query) {
+      query.set('size', key);
+    }
+    window.history.replaceState({}, '', `/?${query.toString()}`);
+  }
+
+  function goURL() {
+    const query = new URLSearchParams(window.location.search);
+    query.set('url', encodeURIComponent(newURL));
+    query.set('size', screenSize);
+    window.location.href = `/?url=${query.toString()}`;
   }
 
   const [newURL, setNewURL] = useState('');
@@ -58,17 +74,16 @@ export default function Home() {
       >
         <Text
           h1
-          size={50}
+          size={30}
           css={{
             textGradient: '45deg, $purple600 0%, $pink600 100%',
             letterSpacing: '0.02em',
-            margin: 0,
           }}
         >
-          MobiView.Pro
+          Mobiview.pro
         </Text>
         <Text
-          size={14}
+          size={16}
           css={{
             color: '#666',
             letterSpacing: '0.03em',
@@ -129,7 +144,7 @@ export default function Home() {
           <button
             className="bg-blue-500 text-white p-2 rounded-md"
             onClick={() => {
-              window.location.href = `/?url=${encodeURIComponent(newURL)}`;
+              goURL();
             }}
             style={{
               padding: '10px 20px',
