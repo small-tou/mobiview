@@ -6,18 +6,18 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   const mobileScreenSizes: any = {
-    'iphone-14': '390x844',
-    'iphone-plus': '414x896',
-    'iphone-pro-max': '428x926',
-    'iphone-12-mini': '360x780',
-    ipad: '1024x768',
-    'ipad-pro': '1366x1024',
-    'ipad-mini': '1024x768',
+    'iPhone-14': '390x844',
+    'iPhone-Plus': '414x896',
+    'iPhone-Pro-Max': '428x926',
+    'iPhone-12-Mini': '360x780',
+    iPad: '1024x768',
+    'iPad-Pro': '1366x1024',
+    'iPad-Mini': '1024x768',
   };
   const [width, setWidth] = useState(375);
   const [height, setHeight] = useState(812);
   const [url, setUrl] = useState('');
-  const [screenSize, setScreenSize] = useState('iphone-14' as string);
+  const [screenSize, setScreenSize] = useState('iPhone-14' as string);
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
@@ -41,17 +41,16 @@ export default function Home() {
         background: '#eee',
       }}
     >
-      <div className="flex flex-row items-center justify-center p-10 gap-10">
+      <div className="flex flex-row items-center justify-center p-5 gap-10">
         {Object.keys(mobileScreenSizes).map((key) => (
           <a
             key={key}
             style={{
               fontSize: '14px',
-              textTransform: 'uppercase',
               cursor: 'pointer',
             }}
             className={`${
-              screenSize === key ? 'text-blue-500' : 'text-black-500'
+              screenSize === key ? 'text-blue-500 text-bold' : 'text-black-500'
             } hover:text-blue-500`}
             onClick={() => {
               activeScreenSize(key);
