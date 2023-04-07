@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 export default function Home() {
   const mobileScreenSizes: any = {
     'iPhone-14': '390x844',
-    'iPhone-Plus': '414x896',
+    'iPhone-14-Plus': '414x896',
     'iPhone-Pro-Max': '428x926',
     'iPhone-12-Mini': '360x780',
     'iPad-Mini': '1024x768',
@@ -218,13 +218,13 @@ export default function Home() {
           <iframe
             src={url}
             style={{
-              border: 'none',
-              borderRadius: '15px',
+              borderRadius: '25px',
               background: '#fff',
               width,
               height,
-              boxShadow: '0 0 10px rgba(0,0,0,0.1)',
+              boxShadow: '0 0 15px rgba(0,0,0,0.2)',
               overflow: 'hidden',
+              border: '6px solid #333',
             }}
           ></iframe>
         )}
