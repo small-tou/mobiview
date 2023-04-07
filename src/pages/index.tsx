@@ -5,7 +5,7 @@ import { Link, Text, Tooltip } from '@nextui-org/react';
 import toast from 'react-hot-toast';
 import Links from '../components/Links';
 const inter = Inter({ subsets: ['latin'] });
-
+import Head from 'next/head';
 export default function Home() {
   const mobileScreenSizes: any = {
     'iPhone-14': '390x844',
@@ -57,6 +57,18 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="shortcut icon" href="/mobile.png" />
+        <title>MobiView.Pro</title>
+        <meta
+          name="description"
+          content="Preview and share your site with mobile style"
+        />
+      </Head>
       <div
         className="flex flex-column items-center justify-center main-body"
         style={{
