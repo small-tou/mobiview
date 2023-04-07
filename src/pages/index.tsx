@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 import Links from '../components/Links';
 const inter = Inter({ subsets: ['latin'] });
 import Head from 'next/head';
+import Script from 'next/script';
 export default function Home() {
   const mobileScreenSizes: any = {
     'iPhone-14': '390x844',
@@ -260,6 +261,19 @@ export default function Home() {
         </div>
       </div>
       <Links />
+
+      <Script
+        data-name="BMC-Widget"
+        data-cfasync="false"
+        src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+        data-id="yootou"
+        data-description="Support me on Buy me a coffee!"
+        data-message=""
+        data-color="#FF813F"
+        data-position="Right"
+        data-x_margin="18"
+        data-y_margin="18"
+      ></Script>
     </>
   );
 }

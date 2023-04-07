@@ -1,4 +1,5 @@
 import { Link, Tooltip } from '@nextui-org/react';
+import Image from 'next/image';
 
 export default function Links() {
   const links = [
@@ -68,7 +69,7 @@ export default function Links() {
         }}
       >
         {links.map((link) => (
-          <Tooltip content={link.desc} key={link.link} color={'success'}>
+          <Tooltip content={link.desc} key={link.link} color={'primary'}>
             <Link
               href={link.link}
               target="_blank"
@@ -86,6 +87,28 @@ export default function Links() {
             </Link>
           </Tooltip>
         ))}
+        <Link
+          href={'https://www.buymeacoffee.com/yootou'}
+          target="_blank"
+          css={{
+            padding: '4px 10px',
+            fontWeight: '500',
+            color: '#333',
+            height: '30px',
+          }}
+        >
+          <Tooltip content="Buy me a coffee" color={'primary'}>
+            <Image
+              src="/bmc-logo-yellow.png"
+              alt="buy me a coffee"
+              width={30}
+              height={30}
+              style={{
+                borderRadius: '30%',
+              }}
+            />
+          </Tooltip>
+        </Link>
       </div>
     </div>
   );
