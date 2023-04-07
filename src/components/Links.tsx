@@ -23,6 +23,11 @@ export default function Links() {
       desc: '在新的标签页中显示一个漂亮的显示工作状态和时间的霓虹灯界面，可以控制是否在工作中，并统计工作时间等',
     },
     {
+      link: 'https://marry3.love',
+      name: 'Marry3.love',
+      desc: 'Witness your Love in Web3 and get the Soulbound NFT Certificate on the chain',
+    },
+    {
       link: 'https://wp-pc-wallpaper.vercel.app/',
       name: 'WP PC Wallpaper',
       desc: 'A wallpaper/banner generator for Wonderpals NFT Holders',
