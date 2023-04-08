@@ -235,9 +235,9 @@ export default function Home() {
             <a
               onClick={() => {
                 navigator.clipboard.writeText(
-                  `MobiView.Pro - Preview or share your website on mobile devices. https://mobiview.pro/?url=${encodeURIComponent(
-                    url
-                  )}`
+                  `MobiView.Pro - Preview and share your site with mobile style. 
+===========
+https://mobiview.pro/?url=${encodeURIComponent(url)}`
                 );
                 toast.success('Copied to clipboard successfully!');
               }}
