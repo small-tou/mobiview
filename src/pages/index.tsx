@@ -154,6 +154,12 @@ export default function Home() {
                 borderRadius: '8px',
                 padding: '10px 20px',
               }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  e.preventDefault();
+                  goURL();
+                }
+              }}
               placeholder="Enter URL"
             />
             <button
