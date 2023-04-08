@@ -51,7 +51,7 @@ export default function Home() {
     const query = new URLSearchParams(window.location.search);
     query.set('url', encodeURIComponent(newURL));
     query.set('size', screenSize);
-    window.location.href = `/?url=${query.toString()}`;
+    window.location.href = `/?${query.toString()}`;
   }
 
   const [newURL, setNewURL] = useState('');
