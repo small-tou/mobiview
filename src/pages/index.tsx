@@ -169,7 +169,7 @@ export default function Home() {
                   goURL();
                 }
               }}
-              placeholder="Enter URL"
+              placeholder="Enter your URL (with http or https)"
             />
             <button
               className="bg-blue-500 text-white p-2 rounded-md"
