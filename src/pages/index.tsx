@@ -74,7 +74,7 @@ export default function Home() {
         className="flex flex-column items-center justify-center main-body"
         style={{
           width: '100vw',
-          height: 'calc(100vh - 50px)',
+          height: '100vh',
           background: '#F7F7F7',
           justifyContent: 'space-evenly',
         }}
@@ -260,20 +260,7 @@ export default function Home() {
           )}
         </div>
       </div>
-      <Links />
-
-      <Script
-        data-name="BMC-Widget"
-        data-cfasync="false"
-        src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-        data-id="yootou"
-        data-description="Support me on Buy me a coffee!"
-        data-message=""
-        data-color="#FF813F"
-        data-position="Right"
-        data-x_margin="18"
-        data-y_margin="18"
-      ></Script>
+      {/* <Links /> */}
     </>
   );
 }
