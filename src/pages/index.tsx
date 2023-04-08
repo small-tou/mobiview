@@ -37,6 +37,18 @@ export default function Home() {
     }
   }, [router.query.url, router.query.size]);
 
+  let showTip = false;
+  useEffect(() => {
+    setTimeout(() => {
+      if (window.innerWidth < 1000 && !showTip) {
+        toast.error('Please use this app on a desktop PC', {
+          duration: 100000,
+        });
+        showTip = true;
+      }
+    }, 1000);
+  }, []);
+
   function activeScreenSize(key: string) {
     const [width, height] = mobileScreenSizes[key].split('x');
     setWidth(Number(width));
