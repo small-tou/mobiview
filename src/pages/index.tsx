@@ -48,6 +48,15 @@ export default function Home() {
   }
 
   function goURL() {
+    let _newURL = newURL;
+    if (!_newURL) {
+      toast.error('Please enter a valid URL');
+      return;
+    }
+    if (!_newURL.startsWith('http')) {
+      toast.error('Please enter a valid URL with http or https protocol');
+      return;
+    }
     const query = new URLSearchParams(window.location.search);
     query.set('url', encodeURIComponent(newURL));
     query.set('size', screenSize);
