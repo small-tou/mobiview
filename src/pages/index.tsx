@@ -115,7 +115,7 @@ export default function Home() {
               letterSpacing: '0.03em',
             }}
           >
-            Preview or share your website on mobile devices
+            Preview and share your site with mobile style
           </Text>
 
           <div
