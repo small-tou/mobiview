@@ -18,6 +18,8 @@ export default function Home() {
     iPad: '1024x768',
     'iPad-Pro-11': '1194x834',
     'iPad-Pro-12.9': '1366x1024',
+    'Model-3': '1920x1080',
+    'Model-S': '1200x1920',
   };
   const [width, setWidth] = useState(375);
   const [height, setHeight] = useState(812);
@@ -59,6 +61,9 @@ export default function Home() {
       query.set('size', key);
     }
     window.history.replaceState({}, '', `/?${query.toString()}`);
+    // if (width * 1 > 1200 || height * 1 > 800) {
+    //   toast.success('Window size will be scaled to fit the screen');
+    // }
   }
 
   function goURL() {
@@ -289,20 +294,38 @@ https://mobiview.pro/?url=${encodeURIComponent(url)}`
             justifyContent: 'center',
           }}
         >
-          {url && (
-            <iframe
-              src={url}
-              style={{
-                borderRadius: '25px',
-                background: '#fff',
-                width,
-                height,
-                boxShadow: '0 0 15px rgba(0,0,0,0.2)',
-                overflow: 'hidden',
-                border: '6px solid #333',
-              }}
-            ></iframe>
-          )}
+          <div
+            style={{
+              maxWidth: '1200px',
+            }}
+          >
+            {url && (
+              <iframe
+                src={url}
+                style={{
+                  borderRadius: '25px',
+                  background: '#fff',
+                  width,
+                  height,
+                  boxShadow: '0 0 15px rgba(0,0,0,0.2)',
+                  overflow: 'hidden',
+                  border: '6px solid #333',
+                  transform:
+                    width > 1200
+                      ? 'scale(' + 1200 / width + ')'
+                      : height > 800
+                      ? 'scale(' + 800 / height + ')'
+                      : 'scale(1)',
+                  transformOrigin:
+                    width > 1200
+                      ? '0 center'
+                      : height > 800
+                      ? 'center center'
+                      : 'center center',
+                }}
+              ></iframe>
+            )}
+          </div>
         </div>
       </div>
       {/* <Links /> */}
