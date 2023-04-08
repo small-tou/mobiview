@@ -7,6 +7,7 @@ import Links from '../components/Links';
 const inter = Inter({ subsets: ['latin'] });
 import Head from 'next/head';
 import Script from 'next/script';
+import { useRouter } from 'next/router';
 export default function Home() {
   const mobileScreenSizes: any = {
     'iPhone-14': '390x844',
@@ -23,6 +24,7 @@ export default function Home() {
   const [url, setUrl] = useState('https://mobiview-pro.gitbook.io/about/');
   const [screenSize, setScreenSize] = useState('iPhone-14' as string);
 
+  const router = useRouter();
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
     if (query && query.get('url')) {
@@ -33,7 +35,7 @@ export default function Home() {
       const _size = query.get('size') as string;
       if (_size) activeScreenSize(_size);
     }
-  }, []);
+  }, [router.query.url, router.query.size]);
 
   function activeScreenSize(key: string) {
     const [width, height] = mobileScreenSizes[key].split('x');
