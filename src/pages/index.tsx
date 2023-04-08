@@ -153,7 +153,12 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <div className="flex flex-row items-center justify-center p-10 gap-5">
+          <div
+            className="flex flex-row items-center justify-center gap-5"
+            style={{
+              marginTop: '20px',
+            }}
+          >
             <input
               type="text"
               className="border-2 border-gray-300 p-2"
@@ -161,7 +166,7 @@ export default function Home() {
                 setNewURL(e.target.value);
               }}
               style={{
-                width: '290px',
+                width: '294px',
                 borderRadius: '8px',
                 padding: '10px 20px',
               }}
@@ -171,7 +176,7 @@ export default function Home() {
                   goURL();
                 }
               }}
-              placeholder="Enter your URL (with http or https)"
+              placeholder="Enter your URL (with https://)"
             />
             <button
               className="bg-blue-500 text-white p-2 rounded-md"
@@ -184,6 +189,15 @@ export default function Home() {
             >
               Go URL
             </button>
+          </div>
+          <div
+            className="flex flex-row items-center justify-center"
+            style={{
+              fontSize: '12px',
+              marginTop: '20px',
+            }}
+          >
+            Some website not support be embeded will not effect.
           </div>
           <div
             style={{
