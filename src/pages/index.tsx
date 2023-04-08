@@ -98,16 +98,18 @@ export default function Home() {
             justifyContent: 'center',
           }}
         >
-          <Text
-            h1
-            size={30}
-            css={{
-              textGradient: '45deg, $purple600 0%, $pink600 100%',
-              letterSpacing: '0.02em',
-            }}
-          >
-            Mobiview.pro
-          </Text>
+          <Link href="/">
+            <Text
+              h1
+              size={30}
+              css={{
+                textGradient: '45deg, $purple600 0%, $pink600 100%',
+                letterSpacing: '0.02em',
+              }}
+            >
+              Mobiview.pro
+            </Text>
+          </Link>
           <Text
             size={16}
             css={{
